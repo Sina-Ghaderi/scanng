@@ -1,5 +1,5 @@
 # Gopher IP Scan
-***If you've come here looking to simply run Gopher Scan on windows, [you may download it here](https://gips.snix.ir).***  
+***If you've come here looking to simply run Gopher Scan on windows, [you may download it here](https://github.com/Sina-Ghaderi/gopher-scan/releases/).***  
 Windows GUI tool for scanning networks written in Golang, Core features:  
 scan alive host, fast port mapper, built-in ssh client and wake on lan  
 friendly user interface, run on windows 7, 8.1, 10   
