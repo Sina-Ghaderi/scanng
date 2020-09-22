@@ -12,6 +12,8 @@ import (
 
 func main() {
 	if len(os.Args) <= 1 {
+		console(false)
+		defer console(true)
 		startMainGUIWindows()
 		return
 	}
@@ -62,5 +64,21 @@ func main() {
 			walk.MsgBox(winSSHcli, "Connection error", fmt.Sprintf("%v", err), walk.MsgBoxIconError)
 			return
 		}
+	}
+}
+
+func console(show bool) {
+	var getWin = syscall.NewLazyDLL("kernel32.dll").NewProc("GetConsoleWindow")
+	var showWin = syscall.NewLazyDLL("user32.dll").NewProc("ShowWindow")
+	hwnd, _, _ := getWin.Call()
+	if hwnd == 0 {
+		return
+	}
+	if show {
+		var SWRESTORE uintptr = 9
+		showWin.Call(hwnd, SWRESTORE)
+	} else {
+		var SWHIDE uintptr = 0
+		showWin.Call(hwnd, SWHIDE)
 	}
 }
