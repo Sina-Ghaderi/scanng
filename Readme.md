@@ -15,4 +15,4 @@ Generate rsrc.syso file: `rsrc -manifest manifest.xml -ico scanicon.ico -o rsrc.
 Build exe binary: `go build -ldflags -H=windowsgui -o "Gopher IP Scan.exe"`
 
 ### Gohper ScreenShots
-![Screenshot](screenshot-main.jpg) ![Screenshot](screenshot-mainrc.jpg) ![Screenshot](screenshot-mapp.jpg) ![Screenshot](screenshot-maprs.jpg)
+![Screenshot](screenshot-main.jpg) ![Screenshot](screenshot-mainrc.jpg) ![Screenshot](screenshot-mapp.jpg) ![Screenshot](screenshot-maprs.jpg) ![Screenshot](screenshot-sshcli.jpg)
